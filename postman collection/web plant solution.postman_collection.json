@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "ece6a797-cb43-46de-92bc-e9fc7a084727",
+		"name": "web plant solution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26094812"
+	},
+	"item": [
+		{
+			"name": "get all Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"training work should be completed\",\r\n    \"category\":\"Training\",\r\n    \"description\":\"work with some one on priority\",\r\n    \"priority\":\"Medium\",\r\n    \"dueDate\":\"12-02-2024\",\r\n    \"taskHolder\":\"shakir danger\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/task/getAll?pageSize=5&page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"getAll"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Human Resources",
+							"disabled": true
+						},
+						{
+							"key": "search",
+							"value": "Training",
+							"disabled": true
+						},
+						{
+							"key": "priority",
+							"value": "Low",
+							"disabled": true
+						},
+						{
+							"key": "column",
+							"value": "title",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    \r\n    {\r\n    \"title\": \"Update project progress report\",\r\n    \"description\": \"Compile and update project progress report\",\r\n    \"category\": \"Documentation\",\r\n    \"priority\": \"Medium\",\r\n    \"taskHolder\": \"Mia\",\r\n    \"dueDate\": \"2024-03-26\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/task/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update the task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"title\": \"i have change all thigs\",\r\n    \"description\": \"Update user documentation for software product\",\r\n    \"category\": \"Documentation\",\r\n    \"priority\": \"Medium\",\r\n    \"taskHolder\": \"shakir\",\r\n    \"dueDate\": \"2024-03-11\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/task/update/65daf5d935bba652485834e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"update",
+						"65daf5d935bba652485834e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/task/delete/65daf5d135bba652485834e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"delete",
+						"65daf5d135bba652485834e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completed route",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/task/completed/65dcd7ecd7f3420034ff688c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"completed",
+						"65dcd7ecd7f3420034ff688c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
